@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="title text-center mt-3">
+        <h1>Rick and Morty</h1>
+        <h2 class="text-warning">Main Characters</h2>
+    </div>
+    <div class="text-start ms-4">
+        <button class="btn btn-primary" routerLink="/search">
+            <i class="fas fa-search"></i> Buscar personaje
+        </button>
+    </div>
+    <div class="tarjets">
+        <div class="tarjet" *ngFor="let character of listCharacter" #pdfContent id="pdfContent">
+            <div class="image">
+                <img src="{{character.imagen}}" alt="{{character.nombre}}">
+            </div>
+            <div class="container_detail">
+                <p class="name" #name>{{character.nombre}}</p>
+                <p class="detail">
+                    <i *ngIf="character.estado === 'Alive'" class="fas fa-heart text-success"></i>
+                    <i *ngIf="character.estado === 'Dead'" class="fas fa-skull-crossbones text-danger"></i>
+                    <i *ngIf="character.estado === 'unknown'" class="far fa-question-circle text-warning"></i>
+                    {{character.estado}} - {{character.especie}}
+                </p>
+                <p class="subtext">Last know location: </p>
+                <p class="text location">{{character.location}}</p>
+                <p class="subtext">First seen in: </p>
+                <p class="text">{{character.episodios[0]}}</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="search">
+    <div class="input-group mb-3 mx-auto">
+      <input type="text" class="form-control" placeholder="Buscar personaje de Rick y Morty" #input>
+      <button class="btn btn-primary" type="button" (click)="search(input.value)">
+        <i class="fas fa-search"></i> Buscar
+      </button>
+    </div>
+  </div>
+  <div class="tarjet" *ngFor="let character of listCharacter" #pdfContent id="pdfContent">
+    <div class="image">
+      <img src="{{character.imagen}}" alt="{{character.nombre}}">
+    </div>
+    <div class="container_detail">
+      <p class="name" #name>{{character.nombre}}</p>
+      <p class="detail">
+        <i *ngIf="character.estado === 'Alive'" class="fas fa-heart text-success"></i>
+        <i *ngIf="character.estado === 'Dead'" class="fas fa-skull-crossbones text-danger"></i>
+        <i *ngIf="character.estado === 'unknown'" class="far fa-question-circle text-warning"></i>
+        {{character.estado}} - {{character.especie}}
+      </p>
+      <p class="subtext">Last know location: </p>
+      <p class="text location">{{character.location}}</p>
+      <p class="subtext">First seen in: </p>
+      <p class="text">{{character.episodios[0]}}</p>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center align-items-center mt-4">
+    <button class="pdf btn btn-danger" (click)="generatePDF()" >
+      <i class="fas fa-download"></i> Generar PDF
+    </button>
+  </div>
+  <span class="text-danger mt-3 text-center fs-4">{{message}}</span>
+</div>
