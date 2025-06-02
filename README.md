@@ -7,6 +7,10 @@ https://github.com/LeoChaname21/Backend_RickandMorty
 ## Correr Proyecto 🚀:
 npm start
 ## Ruta Base 🚀:
+Muestra los personajes principales de la serie Rick y Morty.
+
 http://localhost:4200
 ## Ruta BuscarPersonaje 🚀:
+Permite una busqueda individual del personaje que deseas ver su información.
+
 http://localhost:4200/search
