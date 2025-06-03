@@ -15,11 +15,11 @@ Muestra los personajes principales de la serie Rick y Morty.
 
 Permite una busqueda individual del personaje que deseas ver su información.
 
-![Vista Busqueda](public/img/capturaRutaBusqueda.png)
+![Vista Busqueda](public/img/CapturaRutaBusqueda.png)
 
 ## Ruta Error ❌: 
 Ejem: http://localhost:4200/peru
 
 Muestra una página de error indicando al usuario que la página no existe.
 
-![Vista Busqueda](public/img/capturaRutaError.png)
+![Vista Busqueda](public/img/CapturaRutaError.png)
