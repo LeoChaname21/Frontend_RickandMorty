@@ -6,11 +6,20 @@ npm install
 https://github.com/LeoChaname21/Backend_RickandMorty
 ## Correr Proyecto 🚀:
 npm start
-## Ruta Base 🚀:
+## Ruta Base 🚀 : http://localhost:4200
 Muestra los personajes principales de la serie Rick y Morty.
 
-http://localhost:4200
-## Ruta BuscarPersonaje 🚀:
+![Vista Principal](public/img/capturaRutaBase.png)
+
+## Ruta BuscarPersonaje 🚀: http://localhost:4200/search
+
 Permite una busqueda individual del personaje que deseas ver su información.
 
-http://localhost:4200/search
+![Vista Busqueda](public/img/capturaRutaBusqueda.png)
+
+## Ruta Error ❌: 
+Ejem: http://localhost:4200/peru
+
+Muestra una página de error indicando al usuario que la página no existe.
+
+![Vista Busqueda](public/img/capturaRutaError.png)
